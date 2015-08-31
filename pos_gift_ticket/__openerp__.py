@@ -1,8 +1,10 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2015-TODAY Akretion (<http://www.akretion.com>).
+#    This module copyright :
+#        (c) 2015 FactorLibre S.L. (http://www.factorlibre.com)
+#                 Ismael Calvo <ismael.calvo@factorlibre.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,18 +22,18 @@
 ##############################################################################
 
 {
-    'name': 'POS Remove POS Category',
-    'version': '0.1',
-    'author': 'Akretion, Odoo Community Association (OCA)',
-    'category': 'Sales Management',
-    'depends': [
-        'point_of_sale',
-    ],
-    'demo': [],
-    'website': 'https://www.akretion.com',
+    "name": "Gift Ticket",
+    "version": "0.1",
+    "author": "FactorLibre, Odoo Community Association (OCA)",
+    "website": "http://www.factorlibre.com",
+    "license": "AGPL-3",
+    "category": "Point Of Sale",
+    "depends": ['base', 'point_of_sale'],
     'data': [
-        'point_of_sale_view.xml',
-        'views/pos_category.xml',
+        "views/pos_template.xml",
     ],
-    'installable': True,
+    "qweb": [
+        'static/src/xml/pos.xml',
+    ],
+    "installable": True,
 }
